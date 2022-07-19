@@ -25,7 +25,6 @@ export const MyStack = () => {
           headerShown: false,
         }}
       />
-      
     </Stack.Navigator>
   );
 };

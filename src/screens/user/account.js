@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { Avatar } from "react-native-paper";
 import { ListComponent } from "../../components/account/listItem";
+import { Button } from "react-native-paper";
+import { AuthenticationContext } from "../../services/favourites/authentication-context";
 
-export const AccountScreen = () => {
+export const AccountScreen = ({ navigation }) => {
+  const { isLogged, userInfo } = useContext(AuthenticationContext);
   return (
     <>
       <View style={styles.topContainer}>
         <View style={styles.img}>
           <Avatar.Image
             size={105}
-            source={require("../../../assets/userIcon.jpg")}
+            source={
+              isLogged
+                ? userInfo.picture
+                : require("../../../assets/userIcon.jpg")
+            }
           />
         </View>
         <View style={styles.name}>
@@ -21,7 +28,7 @@ export const AccountScreen = () => {
               color: "black",
             }}
           >
-            Abhay Bhai
+            {isLogged ? userInfo.name : "Welcome to Airex!"}
           </Text>
           <Text
             style={{
@@ -29,10 +36,11 @@ export const AccountScreen = () => {
               fontSize: 17,
               fontWeight: "400",
               fontStyle: "normal",
+
               textDecorationLine: "underline",
             }}
           >
-            view and edit your profile
+            {isLogged ? "view and edit your profile" : "Log in to your Account"}
           </Text>
         </View>
       </View>
@@ -44,6 +52,23 @@ export const AccountScreen = () => {
       />
       <View>
         <ListComponent />
+        {isLogged ? (
+          <Button
+            icon="camera"
+            mode="contained"
+            onPress={() => navigation.navigate("login")}
+          >
+            Logout
+          </Button>
+        ) : (
+          <Button
+            icon="camera"
+            mode="contained"
+            onPress={() => navigation.navigate("login")}
+          >
+            Login
+          </Button>
+        )}
       </View>
     </>
   );

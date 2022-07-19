@@ -2,6 +2,7 @@ import React from "react";
 import { TouchableOpacity } from "react-native";
 import { List } from "react-native-paper";
 
+
 export const ListComponent = () => {
   return (
     <>

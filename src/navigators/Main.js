@@ -11,6 +11,7 @@ import { ChatScreen } from "../screens/chat/chat";
 import { UserScreen } from "../screens/user/user";
 import { FavouritesContextProvider } from "../services/favourites/favourites-context";
 import { UserNavigator } from "./userNavigator";
+import { AuthenticationContextProvider } from "../services/favourites/authentication-context";
 
 const Tab = createBottomTabNavigator();
 

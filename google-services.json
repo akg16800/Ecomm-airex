@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "117880214700",
+    "project_id": "ecomm-356310",
+    "storage_bucket": "ecomm-356310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117880214700:android:32dad08199fca27d4f7b09",
+        "android_client_info": {
+          "package_name": "com.vnit.ecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117880214700-aiff1fe4oel575d9afi9c4lgp3mm9f9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vnit.ecom",
+            "certificate_hash": "eee50c36e666af8e12d03b444a47539e6bbc12dd"
+          }
+        },
+        {
+          "client_id": "117880214700-g4l47ma844assvklvhe559dhp0ubndh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFVEZASOPEegiXfGLgeoCPpbiLlIQiGyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117880214700-3nel6sk9gui6r6j7m3k4l0cosp4mfkum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
